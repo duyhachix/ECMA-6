@@ -1,4 +1,4 @@
-//// Classes
+//// 1.Classes
 
 ////function Course(name, price) {
 ////	(this.name = name), (this.price = price);
@@ -23,14 +23,14 @@
 //console.log(reactjsCourse);
 //console.log(vuejsCourse);
 
-//// default parameter value
+//// 2.default parameter value
 
 //function logger(param) {
 //	console.log(param);
 //}
 //logger('hello các bạn mình tên là Chiju');
 
-//// enhanced object literals
+//// 3.enhanced object literals
 
 //let fullname = 'Thanh Duy';
 //let age = 22;
@@ -45,8 +45,8 @@
 
 //console.log(person);
 
-//// Destructuring (phân rã) -  áp dụng cho Array và Object
-//// Rest param: param lấy ra các phần tử còn lại sau khi phân rã
+//// 4. Destructuring (phân rã) -  áp dụng cho Array và Object
+//// 5. Rest param: param lấy ra các phần tử còn lại sau khi phân rã
 //let array = ['JS', 'Vuejs', 'Reactjs'];
 //let [a, ...rest1] = array;
 
@@ -75,7 +75,7 @@
 //	description: 'Khóa học javascript',
 //});
 
-//// spread
+//// 6.spread
 
 //let arr1 = ['Vue', 'react', 'angular'];
 //let arr2 = ['bootstrap', 'tailwind'];
@@ -88,12 +88,43 @@
 //}
 //vlNam(...arrray);
 ////console.log(rray);
-const person1 = {
-	name: 'Son',
-	age: 21,
+// const person1 = {
+// 	name: 'Son',
+// 	age: 21,
+// };
+
+// // Expected results
+// console.log(person2.name); // Output: 'Son'
+// console.log(person2.age); // Output: 21
+// console.log(person1 === person2); // Output: false
+
+// 7. Tagged template literal
+// Cú pháp:
+
+// function highlight(...rest) {
+// 	console.log(rest);
+// }
+
+// var brand = 'Mecedes';
+// var version = 'GLC 300';
+
+// highlight`Em vừa mua con xe ${brand} dòng ${version} !!! `;
+
+// 8. optional chaining (?.)
+
+const obj = {
+	name: 'Bu',
+	cat: {
+		name: 'Đen',
+		cat2: {
+			name: 'Trắng',
+			cat3: {
+				name: 'Vàng',
+			},
+		},
+	},
 };
 
-// Expected results
-console.log(person2.name); // Output: 'Son'
-console.log(person2.age); // Output: 21
-console.log(person1 === person2); // Output: false
+if (obj?.cat?.cat2?.cat3) {
+	console.log(obj.cat.cat2.cat3.name);
+}
